@@ -1,4 +1,4 @@
-module my_addrx::Loops{
+module my_addrx::Loop{
 
     fun sample_for_loop(count: u64):u64{
         let value = 0;
@@ -48,22 +48,23 @@ module my_addrx::Loops{
     }
     
     fun sample_if_else(){        
-        // let amount_distributed:u64 = 0;
+        let amount_distributed:u64 = 0;
         let num_recipients:u64 = 0;
         let scholarship_amount:u64 = 1000;
 
         
         if( num_recipients > 0) {
-            let amount_distributed = scholarship_amount / num_recipients;
+            amount_distributed = scholarship_amount / num_recipients;
         } else {
-            0
+            amount_distributed = 0;
         };
 
         print(&amount_distributed);
     }
 
-    #[test_only]
     use std::debug::print;
+    
+        #[test_only]
 
     #[test]
     fun test_for_loop(){

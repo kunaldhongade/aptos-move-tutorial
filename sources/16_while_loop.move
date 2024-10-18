@@ -2,7 +2,7 @@
 // using while
 // using infinite loop
 
-module my_addrx::Loops
+module my_addrx::While_Loop
 {
 
     fun sum_of_first_n_natural_numbers(n:u64):u64
